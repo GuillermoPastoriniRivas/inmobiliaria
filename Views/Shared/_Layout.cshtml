@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] | Inmobiliaria Ramirez Muñoz</title>
+
+    <environment include="Development">
+        
+        <link rel="stylesheet" href="~/style.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="south-load"></div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                <div class="email-address">
+                    <a href="mailto:ramirezmunoz@hotmail.com">ramirezmunoz@hotmail.com</a>
+                </div>
+                <div class="phone-number d-flex">
+                    <div class="icon">
+                        <img src="~/img/icons/phone-call.png" alt="">
+                    </div>
+                    <div class="number">
+                        <a href="#">+54 93442 620984</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="southNav">
+
+                    <!-- Logo -->
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-brand"><img src="~/img/core-img/logo.png" alt="Inmobiliaria"></a>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                                <li>
+                                    <a href="#">Servicios</a>
+                                    <ul class="dropdown">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li>
+                                            <a href="#">Listings</a>
+                                            <ul class="dropdown">
+                                                <li><a href="listings.html">Listings</a></li>
+                                                <li><a href="single-listings.html">Single Listings</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog</a>
+                                            <ul class="dropdown">
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="single-blog.html">Single Blog</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="elements.html">Elements</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about-us.html">Nuestra Empresa</a></li>
+                                <li><a href="listings.html">Propiedades</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Consultas</a></li>
+                            </ul>
+
+                            <!-- Search Form -->
+                            <div class="south-search-form">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search Anything ...">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Search Button -->
+                            <a href="#" class="searchbtn"><i class="fa" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    
+
+    <partial name="_CookieConsentPartial" />
+
+    <div>
+        @RenderBody()
+        <!-- ##### Footer Area Start ##### -->
+        <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(../../img/bg-img/cta.jpg);">
+            <!-- Main Footer Area -->
+            <div class="main-footer-area">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Single Footer Widget -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="footer-widget-area mb-100">
+                                <!-- Widget Title -->
+                                <div class="widget-title">
+                                    <h6>Quienes somos</h6>
+                                </div>
+
+                                <img src="~/img/bg-img/footer.jpg" alt="">
+                                <div class="footer-logo my-4">
+                                    <img src="~/img/core-img/logo.png" alt="">
+                                </div>
+                                <p>Una empresa familiar, con la experiencia de tres generaciones al servicio de Negocios Inmobiliarios en Nuestra Región.</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="footer-widget-area mb-100">
+                                <!-- Widget Title -->
+                                <div class="widget-title">
+                                    <h6>Horarios</h6>
+                                </div>
+                                <!-- Office Hours -->
+                                <div class="weekly-office-hours">
+                                    <ul>
+                                        <li class="d-flex align-items-center justify-content-between"><span>Lunes - Viernes</span> <span>09 AM - 19 PM</span></li>
+                                        <li class="d-flex align-items-center justify-content-between"><span>Sábado</span> <span>09 AM - 14 PM</span></li>
+                                        <li class="d-flex align-items-center justify-content-between"><span>Domingo</span> <span>Cerrado</span></li>
+                                    </ul>
+                                </div>
+                                <!-- Address -->
+                                <div class="address">
+                                    <h6><img src="~/img/icons/phone-call.png" alt=""> +54 93442 620984</h6>
+                                    <h6><img src="~/img/icons/envelope.png" alt=""> ramirezmunoz@hotmail.com</h6>
+                                    <h6><img src="~/img/icons/location.png" alt=""> Alberdi 511, Concepción del Uruguay</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="footer-widget-area mb-100">
+                                <!-- Widget Title -->
+                                <div class="widget-title">
+                                    <h6>Enlaces útiles</h6>
+                                </div>
+                                <!-- Nav -->
+                                <ul class="useful-links-nav d-flex align-items-center">
+                                    <li><a href="#">Inicio</a></li>
+                                    <li><a asp-area="" asp-controller="Inmuebles" asp-action="Index">Administrador</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Properties</a></li>
+                                    <li><a href="#">Listings</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Properties</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Elements</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Single Footer Widget -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="footer-widget-area mb-100">
+                                <!-- Widget Title -->
+                                <div class="widget-title">
+                                    <h6>Cotización del dólar</h6>
+                                </div>
+                                <!-- Featured Properties Slides -->
+                                <iframe style="width: 300px; height: 250px;" frameborder="0" scrolling="no" src="https://www.cotizacion-dolar.com.ar/recursos-webmaster/promedios/cotizacion-argentina-300x250.php"></iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copywrite Text -->
+            <div class="copywrite-text d-flex align-items-center justify-content-center">
+                <p>
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
+            </div>
+        </footer>
+        <!-- ##### Footer Area End ##### -->
+    </div>
+
+    <environment include="Development">
+        
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="~/js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="~/js/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="~/js/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="~/js/plugins.js"></script>
+        <script src="~/js/classy-nav.min.js"></script>
+        <script src="~/js/jquery-ui.min.js"></script>
+        <!-- Active js -->
+        <script src="~/js/active.js"></script>
+        
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

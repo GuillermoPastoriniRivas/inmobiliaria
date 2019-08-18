@@ -1,0 +1,102 @@
+﻿@model Inmobiliaria.Models.RoomsInmuebleViewModel
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+<!-- ##### Breadcumb Area Start ##### -->
+<section class="breadcumb-area bg-img" style="background-image: url(img/bg-img/hero1.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcumb-content">
+                    <h3 class="breadcumb-title">Vista del Administrador</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcumb Area End ##### -->
+
+<p>
+    <a asp-action="Create">Agregar Inmueble</a>
+</p>
+
+<form asp-controller="Inmuebles" asp-action="Index" method="get">
+    <p>
+        <select asp-for="RoomsInmueble" asp-items="Model.Rooms">
+            <option value="">Dormitorios</option>
+        </select>
+        <select asp-for="OperacionInmueble" asp-items="Model.Operaciones">
+            <option value="">Operación</option>
+        </select>
+        Ubicación: <input type="text" name="SearchString">
+        <input type="submit" value="Buscar" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Ubicación)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].FechaDePublicación)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Superficie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Baths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Rooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Operacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inmuebles[0].Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Inmuebles)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ubicación)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDePublicación)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Superficie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baths)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rooms)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Operacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
